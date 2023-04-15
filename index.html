@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryptor-Z</title>
+
+    <link rel="shortcut icon" href="/resources/img/confusion.png" type="image/x-icon">
+
+    <!-- STYLES CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!--BOX ICONS LINK -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--================= SCRIPTS =================-->
+    <script src="js/script.js"></script>
+
+</head>
+
+
+<body>
+    <!-- LOGO -->
+    <header>
+        <div class="logo-container">
+            <img id="main-logo" src="resources/img/confusion.png" alt="confusion-face">
+            <h1>Encryptor-Z</h1>
+        </div>
+
+    </header>
+
+    <div class="general-container">
+
+    
+    <!-- INPUT AND BUTTONS -->
+    <section class="main-box">
+        <div class="input">
+            <!-- oninput="this.value = this.value.replace(/[^a-z]/,' ')" -->
+            <input id="input-box" type="text" pattern="[a-z]" placeholder="Ingrese el texto aqui" />
+            <h6 id="advice-msg"><i id="ad-icon" class='bx bxs-error-circle'></i> Solo letras, sin simbolos ni acentos.
+            </h6>
+            <div class="btn-container">
+                <button class="btn" id="enc-btn"
+                    onclick="Encrypt(); HideBox(); ShowBox(); EmptyInput();">Encriptar</button>
+                <button class="btn" id="desc-btn"
+                    onclick=" Desencrypt(); HideBox(); ShowBox(); EmptyInput();">Desencriptar</button>
+                <button class="btn" id="clear-btn" onclick="clearInput(); EmptyInput();">Limpiar</button>
+            </div>
+        </div>
+
+        <!-- ENCRYPTED TEXT BOX -->
+
+    </section>
+    <section class="encrypted-section">
+        <div class="encrypted-box">
+            <div id="error-box">
+                <img id="img-error-msg" src="resources/img/error.png">
+                <h2 class="encrypted-error-txt">Ningún mensaje fue encontrado</h2>
+                <p class="encrypted-error-txt">Ingresa el texto que desees encriptar o desencriptar.</p>
+
+            </div>
+
+            <div id="encrypted-txt">
+                <textarea id="encrypted-final-txt" readonly>
+            </textarea>
+
+                <button class="btn" id="copy-btn" onclick="Copy();"> Copiar </button>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+</body>
+<!--================== FOOTER =============-->
+<footer>
+    <div class="footer-credits">
+        <h6>by Jared M. | 2023</h6>
+        <div class="social-media-bar footer-sub-content">
+            <ul class="social-list">
+                <li class="social-item"><a class="link-social" href="#"
+                        target="_blank">Medium <i class='bx bxl-medium'></i></a></li>
+                <li  class="social-item"><a class="link-social" href="#"
+                        target="_blank">Github <i class='bx bxl-github'></i></a></li>
+                <li  class="social-item"><a class="link-social"
+                        href="#" target="_blank">Linkedin <i
+                            class='bx bxl-linkedin'></i></a></li>
+                <li  class="social-item"><a class="link-social" href="#"
+                        target="_blank">Facebook <i class='bx bxl-facebook'></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-links">
+        <a class="referal-link" href="https://www.flaticon.com/free-icons/no-idea" title="no-idea icons"
+            target="_blank">No-idea icons
+            created
+            by Vector Stall</a>
+        <a class="referal-link" href="https://www.flaticon.com/free-icons/error" title="error icons">Error icons created by Reion</a>
+    </div>
+</footer>
+
+</html>
